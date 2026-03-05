@@ -1,0 +1,25 @@
+{
+  "name": "rfc-skills",
+  "owner": {
+    "name": "Marc-Antoine Lemieux",
+    "email": "marc@lemieux.dev"
+  },
+  "metadata": {
+    "description": "Claude Code skills for writing, reviewing, and managing RFCs and technical proposals",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "rfc-skills",
+      "description": "RFC writing, reviewing, and feedback workflow",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/brainstorming-rfc",
+        "./skills/writing-technical-docs",
+        "./skills/finalizing-technical-docs",
+        "./skills/incorporating-rfc-feedback"
+      ]
+    }
+  ]
+}

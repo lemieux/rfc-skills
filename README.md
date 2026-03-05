@@ -29,15 +29,13 @@ Process reviewer feedback systematically. Each piece of feedback is evaluated ag
 ## Installation
 
 ```
-/plugin marketplace add your-github-username/rfc-skills
-/plugin install rfc-skills@your-github-username-rfc-skills
+/plugin marketplace add lemieux/rfc-skills
+/plugin install rfc-skills@lemieux-rfc-skills
 ```
-
-Replace `your-github-username` with the GitHub username or org where this repo is hosted.
 
 Alternative install methods:
 
-- GitLab or other git hosts: `/plugin marketplace add https://gitlab.com/org/rfc-skills.git`
+- HTTPS: `/plugin marketplace add https://github.com/lemieux/rfc-skills.git`
 - Local directory: `/plugin marketplace add ./path/to/rfc-skills`
 
 ## Prerequisites

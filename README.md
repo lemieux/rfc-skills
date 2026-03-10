@@ -24,7 +24,7 @@ Prepare the draft for circulation. This handles the mechanical cleanup after the
 
 ### 4. incorporating-rfc-feedback
 
-Process reviewer feedback systematically. Each piece of feedback is evaluated against the RFC's documented constraints, background, and abandoned alternatives before accepting or pushing back. Technical reasoning takes priority over social comfort.
+Process reviewer feedback systematically. Each piece of feedback is evaluated against the RFC's documented constraints, background, and abandoned alternatives before accepting or pushing back.
 
 ## Installation
 

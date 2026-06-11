@@ -106,6 +106,11 @@ Accept when:
 - Edge case we missed
 - Better phrasing/structure
 
+Also fold (even if you initially disagreed) when:
+- Multiple reviewers raise the same concern independently
+- We can't articulate why our approach is better, just different
+- The cost of the change is low and it makes the reviewer more comfortable
+
 **How to accept:**
 ```
 "Good catch. Updated [section] to address this."
@@ -185,12 +190,14 @@ What's your take?"
 ```
 FOR multi-item feedback:
   1. Clarify anything unclear FIRST
-  2. Then address in this order:
+  2. Group related items into coherent revisions
+     (not point-by-point patches)
+  3. Then address in this order:
      - Blocking issues (factual errors, security)
      - Clarifications (expand unclear sections)
      - Suggestions (alternative approaches)
      - Polish (wording, formatting)
-  3. Track what was changed vs pushed back
+  4. Track what was changed vs pushed back
 ```
 
 ## Common Mistakes

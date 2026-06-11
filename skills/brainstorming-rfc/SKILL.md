@@ -7,7 +7,7 @@ description: Use before writing any RFC, technical proposal, or design doc. Also
 
 ## Overview
 
-Transform rough ideas into RFC-ready thinking through collaborative dialogue. This skill is for *before* you open the RFC template—discovering what you're actually proposing and why.
+Transform rough ideas into RFC-ready thinking through collaborative dialogue. This skill is for *before* you open the RFC template: discovering what you're actually proposing and why.
 
 Start by understanding the problem space, then ask questions one at a time to uncover constraints, stakeholders, and alternatives. Once the shape is clear, capture a structured ideation note that feeds into RFC drafting.
 
@@ -23,7 +23,7 @@ Start by understanding the problem space, then ask questions one at a time to un
 ## The Process
 
 **Understanding the problem:**
-- Ask what triggered this—what pain, opportunity, or request started this?
+- Ask what triggered this (what pain, opportunity, or request started it?)
 - Ask questions one at a time to clarify the problem
 - Prefer multiple choice questions when possible
 - Focus on: what's broken, who's affected, why now
@@ -113,6 +113,8 @@ Use these to guide the conversation. One at a time, not as a checklist dump.
 
 **File path:** `docs/rfc-brainstorm-<topic>.md`
 
+If the project has no `docs/` directory, confirm the location with the user before saving.
+
 **Frontmatter:**
 ```yaml
 ---
@@ -198,31 +200,15 @@ Notes must be useful when read months later with no memory of this session.
 | It could potentially cause issues... | This risks causing... |
 | In this section, we will explore... | *(Just start the section)* |
 
-Never use:
-- Em dashes — use commas, periods, or parentheses
+**Never use:**
+- Em dashes (use commas, periods, or parentheses)
 - "On one hand X, but on the other hand Y"
+- "Delve", "leverage", "facilitate", "comprehensive", "robust"
 - Excessive hedging ("might possibly", "could potentially")
 - Dramatic rhetorical questions ("But what happens when...?")
 - Preamble before sections ("In this section we will...")
 
-### Avoid LLM Voice
-
-| Don't write | Write instead |
-|-------------|---------------|
-| It's worth noting that this approach has trade-offs. | This approach has trade-offs. |
-| Let's dive into the constraints. | Constraints: |
-| This is important because it helps facilitate... | This matters because... |
-| It could potentially cause issues... | This risks causing... |
-| In this section, we will explore... | *(Just start the section)* |
-
-**Never use:**
-- Em dashes — use commas, periods, or parentheses
-- "Delve", "leverage", "facilitate", "comprehensive", "robust"
-- Dramatic rhetorical questions ("But what happens when...?")
-- Excessive hedging ("might possibly", "could potentially")
-- Preamble before getting to the point
-
-See `writing-technical-docs` skill for full anti-pattern list.
+See `writing-technical-docs` skill for the full anti-pattern list.
 
 ## After Ideation
 

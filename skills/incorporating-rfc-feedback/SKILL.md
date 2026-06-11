@@ -233,7 +233,7 @@ After processing all feedback, provide:
 
 When feedback is accepted, spawn the writer:
 ```
-subagent_type: personal-skills:rfc-writer
+subagent_type: rfc-skills:rfc-writer
 prompt: |
   RFC path: [RFC path]
 
@@ -243,11 +243,8 @@ prompt: |
   Update the RFC to address this feedback.
 ```
 
-**Do NOT use `superpowers:code-reviewer`** - that's for code, not RFC style review.
+**Do NOT use a code-review agent or skill** - those are for code, not RFC style review.
 
-The `rfc-writer` agent:
-- Follows the style guide for tone and structure
-- Runs its internal review loop to catch errors
-- Returns only when the update passes quality checks
+The `rfc-writer` agent follows the style guide for tone and structure. After it returns, spawn an `rfc-reviewer` agent on the updated RFC and send any MAJOR or MODERATE issues back to the writer to fix (same loop as in `writing-technical-docs`, max 3 iterations). Subagents cannot spawn other subagents, so you run this loop, not the writer.
 
 This ensures updates maintain the same quality as the original draft.

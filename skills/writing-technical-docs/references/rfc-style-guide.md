@@ -264,9 +264,9 @@ Every draft starts with:
 **Items for review:**
 - [ ] <!-- REVIEW: item 1 -->
 - [ ] <!-- REVIEW: item 2 -->
-
----
 ```
+
+No trailing `---` after the section. Horizontal lines are banned everywhere in the document, including here.
 
 ## RFC Sections
 

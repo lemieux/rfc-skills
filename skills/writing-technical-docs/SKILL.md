@@ -143,7 +143,7 @@ This helps calibrate how much background and detail to include."
 
 Spawn the `rfc-writer` agent:
 ```
-subagent_type: personal-skills:rfc-writer
+subagent_type: rfc-skills:rfc-writer
 prompt: |
   Source material: [source path]
   Output to: [output path]
@@ -154,20 +154,21 @@ prompt: |
   Write an RFC draft from this source material.
 ```
 
-The writer reads the style guide, writes the draft, runs its internal review loop, and returns.
+The writer reads the style guide, writes the draft to the output file, and returns.
 
 ### Phase 3-5: Review Loop
 
-The `rfc-writer` agent handles the review loop internally. It spawns `rfc-reviewer` to check its work and fixes MAJOR/MODERATE issues before returning.
+You (the main agent) orchestrate the review loop. Subagents cannot spawn other subagents, so the writer cannot review its own work. After the writer returns, spawn the reviewer:
 
-If you need to run a review pass manually (e.g., on an existing draft):
 ```
-subagent_type: personal-skills:rfc-reviewer
+subagent_type: rfc-skills:rfc-reviewer
 prompt: |
   Review the RFC at [draft path]
 ```
 
-**Do NOT use `superpowers:code-reviewer`** - that's for code, not RFC style review.
+The same works for a standalone review pass on an existing draft.
+
+**Do NOT use a code-review agent or skill** - those are for code, not RFC style review.
 
 The reviewer outputs issues only; it does not fix them.
 
@@ -541,9 +542,9 @@ Every RFC draft starts with a status section at the top (after the title):
 **Items for review:**
 - [ ] <!-- REVIEW: item 1 description -->
 - [ ] <!-- REVIEW: item 2 description -->
-
----
 ```
+
+No trailing `---` after the section. Horizontal lines are banned everywhere in the document, including here.
 
 This section:
 - Makes draft state explicit

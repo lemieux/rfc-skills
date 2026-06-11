@@ -170,7 +170,7 @@ Every diagram reference MUST include an implementation. Placeholder descriptions
 
 During drafting, use ASCII diagrams. Mermaid inside markdown tables doesn't render well, making review difficult. ASCII is easier to visualize and edit during the draft cycle.
 
-**Format:** Wrap in a table with caption:
+**Format:** Wrap in a table with caption. The caption is a row of the same table, not text below it:
 
 ```markdown
 | |
@@ -178,6 +178,8 @@ During drafting, use ASCII diagrams. Mermaid inside markdown tables doesn't rend
 | `Client → Redis Buffer → Delivery Pod → Widget` |
 | *Caption: High-level data flow for stream delivery* |
 ```
+
+Backtick-wrapped flow labels like the one above are the prescribed format for simple linear flows. They count as diagrams, not as code-block misuse.
 
 **Simple linear flow:**
 ```
@@ -315,6 +317,7 @@ No trailing `---` after the section. Horizontal lines are banned everywhere in t
 ### Length Guidance
 
 - Target 500-1000 lines for most RFCs
+- Line targets assume prose wrapped at roughly 80-100 characters. If authoring one paragraph per line, judge by content volume, not raw line count.
 - Diagrams and API contracts are dense information and don't count against length
 - Full code implementations DO count against length (and probably shouldn't be there)
 

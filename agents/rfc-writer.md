@@ -41,6 +41,8 @@ The prompt specifies the audience and derived detail level. Adjust depth accordi
 
 **Key principle:** Write for the least familiar reader in your audience, but don't over-explain things everyone knows.
 
+Line targets assume prose wrapped at roughly 80-100 characters. If authoring one paragraph per line, judge by content volume, not raw line count.
+
 ## Writing Guidelines
 
 Follow the style guide exactly. Key points:

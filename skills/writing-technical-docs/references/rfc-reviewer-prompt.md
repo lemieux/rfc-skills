@@ -18,7 +18,7 @@ Check for these specific issues:
 |----------|------------------|
 | `CHOPPY_WRITING` | Staccato sentences, missing transitions, paragraphs that read like bullet lists |
 | `UNDEFINED_REFERENCE` | Components/systems referenced before being explained |
-| `CODE_BLOCK_MISUSE` | Code blocks used for non-code content (prose, section headers) |
+| `CODE_BLOCK_MISUSE` | Code blocks used for non-code content (prose, section headers). Exception: simple linear-flow diagram labels in backticks inside a diagram table container (e.g. `` `Client → Buffer → Widget` ``) are the style guide's prescribed diagram format, not misuse. |
 | `MISSING_DIAGRAM` | Diagram placeholder without ASCII implementation |
 | `DIAGRAM_FORMAT` | Diagram missing table container or caption |
 | `TABLE_OVERUSE` | Table used for items needing prose explanation (risks, tradeoffs) |

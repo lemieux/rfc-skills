@@ -49,7 +49,7 @@ rfc-skills/
 
 Agents are subagent definitions invoked by skills. They are not user-facing.
 
-- **rfc-writer** - Writes and updates RFC drafts following the style guide. Handles initial drafting from source material and revisions based on feedback. Runs an internal review loop to catch quality issues before returning.
+- **rfc-writer** - Writes and updates RFC drafts following the style guide. Handles initial drafting from source material and revisions based on feedback. Self-checks against the style guide before returning; the main agent runs the write→review→revise loop (subagents cannot spawn subagents).
 - **rfc-reviewer** - Reviews RFC drafts for style and quality issues. Outputs a structured list of issues (does not fix them). Checks for choppy writing, undefined references, missing diagrams, and other quality problems.
 
 ## Creating a New Skill

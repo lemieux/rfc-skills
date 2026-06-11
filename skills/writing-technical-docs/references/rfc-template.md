@@ -1,6 +1,6 @@
 # RFC Template Reference
 
-Detailed guidance for each RFC section. The main skill covers style; this covers structure.
+Detailed guidance for each RFC section. The style guide (`rfc-style-guide.md`) covers style; this covers structure.
 
 ## Abstract (required)
 
@@ -63,7 +63,7 @@ Detailed guidance for each RFC section. The main skill covers style; this covers
 
 - Document risks and mitigation strategies
 - Explain why certain risks are acceptable
-- Format: Risk → Likelihood → Impact → Mitigation
+- Write as prose with a subheader per risk (not a table), covering likelihood, impact, and mitigation
 
 ## Future Steps (optional)
 
@@ -77,7 +77,4 @@ Detailed guidance for each RFC section. The main skill covers style; this covers
 - Explain reasoning. This pre-empts reviewer suggestions.
 - Shows thoroughness of research
 
-**Format each alternative:**
-1. What the alternative was
-2. Why it seemed viable initially
-3. Why it was discarded (specific blocker)
+Write each alternative as a short narrative (150-300 words), not a templated format. Each narrative should still cover what the alternative was, why it seemed viable initially, and the specific blocker that killed it - but woven into prose, as if explaining your thought process to a colleague.

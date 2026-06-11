@@ -49,7 +49,7 @@ For deferred items, convert from hidden comment to visible callout:
 
 ### Phase 3: Convert ASCII Diagrams to Mermaid
 
-Find all ASCII diagrams and convert them to mermaid equivalents. **Keep the table container and caption intact.** Only replace the ASCII content with mermaid.
+Find all ASCII diagrams and convert them to mermaid equivalents. Fenced code blocks don't render inside markdown table cells, so the table container from the ASCII version is dropped. Place the mermaid diagram and caption directly in the document; mermaid renders its own visual boundary. Keep the caption.
 
 **Before:**
 ```markdown
@@ -70,8 +70,6 @@ flowchart LR
 *Caption: High-level data flow*
 ```
 
-Note: Fenced code blocks don't render inside markdown table cells. When converting, place the mermaid diagram and caption directly in the document (not inside a table). The table container from the ASCII version is dropped—mermaid renders its own visual boundary.
-
 ### Phase 4: Remove Draft Status Section
 
 Delete the entire Draft Status section from the top of the document:
@@ -83,11 +81,9 @@ Delete the entire Draft Status section from the top of the document:
 
 **Items for review:**
 - [ ] <!-- REVIEW: ... -->
-
----
 ```
 
-This section was for internal tracking and shouldn't appear in the circulated version.
+Also delete any trailing `---` line left over from older drafts that included one. This section was for internal tracking and shouldn't appear in the circulated version.
 
 ### Phase 5: Final Validation
 

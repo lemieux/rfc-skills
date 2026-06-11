@@ -106,6 +106,11 @@ Accept when:
 - Edge case we missed
 - Better phrasing/structure
 
+Also fold (even if you initially disagreed) when:
+- Multiple reviewers raise the same concern independently
+- We can't articulate why our approach is better, just different
+- The cost of the change is low and it makes the reviewer more comfortable
+
 **How to accept:**
 ```
 "Good catch. Updated [section] to address this."
@@ -185,12 +190,14 @@ What's your take?"
 ```
 FOR multi-item feedback:
   1. Clarify anything unclear FIRST
-  2. Then address in this order:
+  2. Group related items into coherent revisions
+     (not point-by-point patches)
+  3. Then address in this order:
      - Blocking issues (factual errors, security)
      - Clarifications (expand unclear sections)
      - Suggestions (alternative approaches)
      - Polish (wording, formatting)
-  3. Track what was changed vs pushed back
+  4. Track what was changed vs pushed back
 ```
 
 ## Common Mistakes
@@ -233,7 +240,7 @@ After processing all feedback, provide:
 
 When feedback is accepted, spawn the writer:
 ```
-subagent_type: personal-skills:rfc-writer
+subagent_type: rfc-skills:rfc-writer
 prompt: |
   RFC path: [RFC path]
 
@@ -243,11 +250,8 @@ prompt: |
   Update the RFC to address this feedback.
 ```
 
-**Do NOT use `superpowers:code-reviewer`** - that's for code, not RFC style review.
+**Do NOT use a code-review agent or skill** - those are for code, not RFC style review.
 
-The `rfc-writer` agent:
-- Follows the style guide for tone and structure
-- Runs its internal review loop to catch errors
-- Returns only when the update passes quality checks
+The `rfc-writer` agent follows the style guide for tone and structure. After it returns, spawn an `rfc-reviewer` agent on the updated RFC and send any MAJOR or MODERATE issues back to the writer to fix (same loop as in `writing-technical-docs`, max 3 iterations). Subagents cannot spawn other subagents, so you run this loop, not the writer.
 
 This ensures updates maintain the same quality as the original draft.
